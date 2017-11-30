@@ -4,7 +4,8 @@ public class MountainBike extends Bicycle{
 
 	// the MountainBike subclass adds one field
     public int seatHeight;
-
+    public int nos;
+    
     // the MountainBike subclass has one constructor
     public MountainBike(int startHeight,
                         int startCadence,
@@ -12,14 +13,16 @@ public class MountainBike extends Bicycle{
                         int startGear) {
         super(startCadence, startSpeed, startGear);
         seatHeight = startHeight;
-    }   
-        
-    public MountainBike() {
-    	super();
-	}
+    }
 
 	// the MountainBike subclass adds one method
     public void setHeight(int newValue) {
         seatHeight = newValue;
     }
+    
+    @Override
+    public void nosSpeedUp(int nos) {
+    	super.speedUp(nos * 3);
+	}
+    
 }

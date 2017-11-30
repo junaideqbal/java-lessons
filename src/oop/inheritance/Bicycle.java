@@ -6,6 +6,7 @@ public class Bicycle {
     public int cadence;
     public int gear;
     public int speed;
+    public int nos; //by default = 0
         
     // the Bicycle class has one constructor
     public Bicycle(int startCadence, int startSpeed, int startGear) {
@@ -13,10 +14,7 @@ public class Bicycle {
         cadence = startCadence;
         speed = startSpeed;
     }
-        
-    public Bicycle() {
-	}
-
+    
 	// the Bicycle class has four methods
     public void setCadence(int newValue) {
         cadence = newValue;
@@ -34,5 +32,12 @@ public class Bicycle {
         speed += increment;
     }
     
-    
+    public void nosSpeedUp(int nos) {
+    	speed += nos;
+    }
+
+	@Override
+	public String toString() {
+		return "Bicycle [cadence=" + cadence + ", gear=" + gear + ", speed=" + speed + ", nos=" + nos + "]";
+	}
 }
